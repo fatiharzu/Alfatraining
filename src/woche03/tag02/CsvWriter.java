@@ -3,24 +3,26 @@ package woche03.tag02;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 
 public class CsvWriter {
     public static void main(String[] args) {
 
         try (PrintWriter writer = new PrintWriter(new File("test.csv"))) {
 
-            StringBuilder sb = new StringBuilder();
-            sb.append("id,");
-            sb.append(',');
-            sb.append("Name");
-            sb.append('\n');
+            List<String> sb = new ArrayList<>();
 
-            sb.append("1");
-            sb.append(',');
-            sb.append("Prashant Ghimire");
-            sb.append('\n');
+            sb.add("Ali");
+            sb.add("Fatih");
+            sb.add("Murat");
 
-            writer.write(sb.toString());
+
+            for (String s : sb) {
+                writer.write(s+" ");
+            }
+
 
             System.out.println("done!");
 
