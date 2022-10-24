@@ -1,7 +1,6 @@
 package woche04.tag01.ClBerndsNotizen.logic;
 
 
-
 import woche04.tag01.ClBerndsNotizen.model.Note;
 
 import java.io.*;
