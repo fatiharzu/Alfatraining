@@ -1,7 +1,5 @@
-package woche03.tag05.ClBerndsNotizen.model;
+package woche04.tag01.ClBerndsNotizen.model;
 
-
-import woche03.tag05.ClBerndsNotizen.logic.FileHandler;
 
 /**
  * Diese Klasse stellt eine Notiz aus der realen Welt dar.
@@ -13,6 +11,9 @@ public class Note {
     //region Konstanten
     public static final String DEFAULT_STRING_VALUE = ">noValueSetYet<";
     private static final boolean DEFAULT_BOOL_VALUE = false;
+    public static final int INDEX_TITLE = 0;
+    public static final int INDEX_CONTENT = 1;
+    public static final int INDEX_IS_IMPORTANT = 2;
     //endregion
 
     //region Attribute
@@ -50,7 +51,6 @@ public class Note {
      * und über eine passende Methode alle Attribute initialisiert.
      *
      * @param csvLine : {@link String} : Csv-Zeile mit Attributen
-     * TODO 4.1 Konstruktor anlegen, welcher Attribute anhand einer CSV-Zeile initialisiert
      */
     public Note(String csvLine) {
         setAttributesFromCsvLine(csvLine);
@@ -65,7 +65,6 @@ public class Note {
      * D.h. ein String mit Attributwerten getrennt durch ein bestimmtes Trennzeichen
      *
      * @return {@link String} : Csv-Zeile
-     * TODO 3 Methode um Csv-String zu erzeugen implementieren
      */
     public String getAttributesAsCsvLine() {
         return title + FileHandler.DELIMITER + content + FileHandler.DELIMITER + isImportant + "\n";
@@ -75,14 +74,13 @@ public class Note {
      * Befüllt alle Attribute mittels eines Csv-Strings
      *
      * @param csvLine : {@link String} : Csv-String mit Attributwerten
-     * TODO 4 Methode zum Befüllen der Attribute anhand eines CSV-String implementieren
      */
-    public void setAttributesFromCsvLine(String csvLine) {
+    private void setAttributesFromCsvLine(String csvLine) {
         String[] allAttributes = csvLine.split(FileHandler.DELIMITER);
 
-        title = allAttributes[0];
-        content = allAttributes[1];
-        isImportant = Boolean.parseBoolean(allAttributes[2]);
+        title = allAttributes[INDEX_TITLE];
+        content = allAttributes[INDEX_CONTENT];
+        isImportant = Boolean.parseBoolean(allAttributes[INDEX_IS_IMPORTANT]);
     }
 
     public String getTitle() {
