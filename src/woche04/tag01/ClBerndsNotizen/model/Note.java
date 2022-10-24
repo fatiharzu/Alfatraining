@@ -1,6 +1,8 @@
 package woche04.tag01.ClBerndsNotizen.model;
 
 
+import woche04.tag01.ClBerndsNotizen.logic.FileHandler;
+
 /**
  * Diese Klasse stellt eine Notiz aus der realen Welt dar.
  * Sie enthält Titel, Inhalt und eine Flag, welche anzeigt,
