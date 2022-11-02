@@ -2,9 +2,9 @@ package woche04.tag01.ClBerndsNotizen.settings;
 
 /**
  * Stellt allgemeine Notizwerte zur Verfügung,
- * welche im gesamten Projekt genutzt werden können.
- * Hier werden sie z.B. zur Wertvalidation der Nutzereingaben
- * genutzt.
+ *  * welche im gesamten Projekt genutzt werden können.
+ *  * Hier werden sie z.B. zur Wertvalidation der Nutzereingaben
+ *  * genutzt.
  */
 public class NoteSettings {
 

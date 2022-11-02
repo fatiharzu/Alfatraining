@@ -52,7 +52,7 @@ import java.util.List;
 public class FileHandler {
 
     //region Konstanten
-    public static final String CSV_FILE_PATH = "src/de/cloch/resources/notes.csv";
+    public static final String CSV_FILE_PATH = "src/woche04/tag01/ClBerndsNotizen/resources/notes.csv";
 
     public static final String DELIMITER = ";";
     //endregion
